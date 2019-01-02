@@ -17,19 +17,19 @@ body {
 .horse-2 img {
     width: 220px;
     position: absolute;
-    top: 175px;
+    top: 135px;
 }
 
 .horse-3 img {
     width: 220px;
     position: absolute;
-    top: 350px
+    top: 260px
 }
 
 .horse-4 img {
     width: 220px;
     position: absolute;
-    top: 550px
+    top: 390px
 }
 
 button {
