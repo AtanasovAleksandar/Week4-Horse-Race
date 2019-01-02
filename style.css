@@ -1,0 +1,37 @@
+body {
+    /* background: url(img/ground-mid.png); */
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+
+.main-display {
+    position: relative;
+    margin-left: 85px;
+}
+
+.horse img {
+    width: 220px;
+    position: absolute;
+}
+
+.horse-2 img {
+    width: 220px;
+    position: absolute;
+    top: 175px;
+}
+
+.horse-3 img {
+    width: 220px;
+    position: absolute;
+    top: 350px
+}
+
+.horse-4 img {
+    width: 220px;
+    position: absolute;
+    top: 550px
+}
+
+button {
+    bottom: 0px;
+}
