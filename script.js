@@ -36,13 +36,13 @@ function move() {
 
     var winnersBlock = document.getElementById('winners')
     winnersBlock.style.display = 'none'
-    var timeleft = 5;
+    var timeLeft = 5;
     var downloadTimer = setInterval(function () {
-        timeleft--;
+        timeLeft--;
         var imgTimer = document.getElementById('timer')
         document.getElementById("timer").style.display = 'block';
-        if (timeleft != 0) {
-            imgTimer.src = "img/numb-" + timeleft + ".png";
+        if (timeLeft != 0) {
+            imgTimer.src = "img/numb-" + timeLeft + ".png";
         } else {
             clearInterval(downloadTimer);
             call();
@@ -88,7 +88,7 @@ function runHorse1() {
         } else {
             pos1++;
             horse.style.left = pos1 + "px";
-            if (pos1 == 400 && horseOneSpeed == 9) {
+            if (pos1 == 400 && horseOneSpeed == 9 || pos1 == 800 && horseOneSpeed == 0) {
                 horse.src = "img/attack .gif";
                 clearInterval(animation1)
             }
@@ -122,7 +122,8 @@ function runHorse2() {
         } else {
             pos2++;
             horse2.style.left = pos2 + "px";
-            if (pos2 == 400 && horseTwoSpeed == 9) {
+
+            if (pos2 == 350 && horseTwoSpeed == 9 || pos2 == 900 && horseTwoSpeed == 0) {
                 horse2.src = "img/attack .gif";
                 clearInterval(animation2)
             }
@@ -156,7 +157,7 @@ function runHorse3() {
         } else {
             pos3++;
             horse3.style.left = pos3 + "px";
-            if (pos3 == 400 && horseThreeSpeed == 9) {
+            if (pos3 == 350 && horseThreeSpeed == 9 || pos3 == 1000 && horseThreeSpeed == 0) {
                 horse3.src = "img/attack .gif";
                 clearInterval(animation3)
             }
@@ -190,7 +191,7 @@ function runHorse4() {
         } else {
             pos4++;
             horse4.style.left = pos4 + "px";
-            if (pos4 == 400 && horseFourSpeed == 9) {
+            if (pos4 == 400 && horseFourSpeed == 9 || pos4 == 800 && horseFourSpeed == 0) {
                 horse4.src = "img/attack .gif";
                 clearInterval(animation4)
             }
@@ -224,7 +225,7 @@ function runHorse5() {
         } else {
             pos5++;
             horse5.style.left = pos5 + "px";
-            if (pos5 == 400 && horseFiveSpeed == 9) {
+            if (pos5 == 500 && horseFiveSpeed == 9 || pos5 == 950 && horseFiveSpeed == 0) {
                 horse5.src = "img/attack .gif";
                 clearInterval(animation5)
             }
@@ -259,9 +260,9 @@ function getWinners() {
     let second = lastWins[1].winners
     let third = lastWins[2].winners
 
-  id1 = document.getElementById('palce-1')
-  id2 = document.getElementById('palce-2')
-  id3 = document.getElementById('palce-3')
+    id1 = document.getElementById('palce-1')
+    id2 = document.getElementById('palce-2')
+    id3 = document.getElementById('palce-3')
     console.log(id1)
     id1.innerText = first;
     id2.innerText = second;
