@@ -15,8 +15,8 @@ var horse5;
 
 var winner;
 var winnerIs;
-var lastWins= [];
-var lWins = {winners: ''}
+var lastWins = [{ winners: 'Player 1' }, { winners: 'Player 2' }, { winners: 'Player 3' }];
+var lWins = { winners: '' }
 
 var animation1
 var animation2
@@ -31,6 +31,9 @@ var pos4
 var pos5
 
 function move() {
+    let start = document.getElementById('first-button')
+    start.style.display = 'none';
+
     var winnersBlock = document.getElementById('winners')
     winnersBlock.style.display = 'none'
     var timeleft = 5;
@@ -231,15 +234,15 @@ function addWinner() {
     var winnersBlock = document.getElementById('winners')
     winnersBlock.style.display = 'block'
     let win = document.getElementById('winner')
-    let winnerList = win.innerHTML = "<li class='winner-winner'>"+winnerIs+"</li>"
+    let winnerList = win.innerHTML = "<li class='winner-winner'>" + winnerIs + "</li>"
     this.lWins.winners = winnerIs;
     console.log(this.lWins)
     winObject = Object.assign({}, this.lWins);
     this.lastWins.unshift(winObject);
     console.log(this.lastWins)
 
+    getWinners()
 }
-
 
 function startAgain() {
     horse.style.left = 0;
@@ -247,4 +250,18 @@ function startAgain() {
     horse3.style.left = 0;
     horse4.style.left = 0;
     horse5.style.left = 0;
+}
+
+function getWinners() {
+    let first = lastWins[0].winners
+    let second = lastWins[1].winners
+    let third = lastWins[2].winners
+
+  id1 = document.getElementById('palce-1')
+  id2 = document.getElementById('palce-2')
+  id3 = document.getElementById('palce-3')
+    console.log(id1)
+    id1.innerText = first;
+    id2.innerText = second;
+    id3.innerText = third;
 }

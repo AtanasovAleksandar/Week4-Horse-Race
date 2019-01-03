@@ -80,3 +80,22 @@ button {
     bottom: 30px;
     left: 100px;
 }
+
+#last-wins {
+    list-style-type: none;
+    font-size: 35px;
+    margin-left: 100px;
+    margin-top: 35px;
+    color: blue;
+}
+
+#last-wins li {
+    padding: 0px;
+}
+.last-round {
+    list-style-type: none;
+    font-size: 46px;
+    margin-left: -128px;
+    color: darkred;
+    margin-bottom: 10px;
+}
