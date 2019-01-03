@@ -86,12 +86,17 @@ button {
     left: 100px;
 }
 
+.start-again:hover {
+background-color: #2020da6e
+}
+
 #last-wins {
     list-style-type: none;
     font-size: 35px;
     margin-left: 100px;
     margin-top: 35px;
-    color: blue;
+    color: white;
+    font-weight: 600;
 }
 
 #last-wins li {
@@ -99,8 +104,15 @@ button {
 }
 .last-round {
     list-style-type: none;
-    font-size: 46px;
+    font-size: 42px;
     margin-left: -128px;
-    color: darkred;
+    color: blueviolet;
     margin-bottom: 10px;
+    font-weight: 600;
+}
+
+#palce-1::before {
+content: 'Winner:';
+color: red;
+margin-left: -126px;
 }
