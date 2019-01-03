@@ -7,7 +7,7 @@ var horseThreeSpeed
 var horseFourSpeed
 var horseFiveSpeed
 
-var horse ;
+var horse;
 var horse1;
 var horse3;
 var horse4;
@@ -19,11 +19,11 @@ var annimation3
 var annimation4
 var annimation5
 
-var pos1 
-var pos2 
-var pos3 
-var pos4 
-var pos5 
+var pos1
+var pos2
+var pos3
+var pos4
+var pos5
 
 
 
@@ -37,7 +37,7 @@ function move() {
 }
 
 function runHorse1() {
-     horse = document.getElementById("horse-1");
+    horse = document.getElementById("horse-1");
     horse.src = "img/run.gif";
     pos1 = 0;
     let speed = Math.floor(Math.random() * 10);
@@ -60,9 +60,8 @@ function runHorse1() {
         } else {
             pos1++;
             horse.style.left = pos1 + "px";
-            if (pos1 == 400 && horseOneSpeed == 9 ) {
+            if (pos1 == 400 && horseOneSpeed == 9) {
                 horse.src = "img/atack.gif";
-                horse1.style.top = 42;
                 clearInterval(annimation1)
             }
         }
@@ -71,7 +70,7 @@ function runHorse1() {
 
 
 function runHorse2() {
-     horse2 = document.getElementById("horse-2");
+    horse2 = document.getElementById("horse-2");
     horse2.src = "img/run.gif";
     pos2 = 0;
     let speed = Math.floor(Math.random() * 10);
@@ -94,9 +93,8 @@ function runHorse2() {
         } else {
             pos2++;
             horse2.style.left = pos2 + "px";
-            if (pos2 == 400 && horseTwoSpeed == 9 ) {
+            if (pos2 == 400 && horseTwoSpeed == 9) {
                 horse2.src = "img/atack.gif";
-                horse2.style.top = 183;
                 clearInterval(annimation2)
             }
         }
@@ -104,7 +102,7 @@ function runHorse2() {
 }
 
 function runHorse3() {
-     horse3 = document.getElementById("horse-3");
+    horse3 = document.getElementById("horse-3");
     horse3.src = "img/run.gif";
     pos3 = 0;
     let speed = Math.floor(Math.random() * 10);
@@ -127,9 +125,8 @@ function runHorse3() {
         } else {
             pos3++;
             horse3.style.left = pos3 + "px";
-            if (pos3 == 400 && horseThreeSpeed == 9 ) {
+            if (pos3 == 400 && horseThreeSpeed == 9) {
                 horse3.src = "img/atack.gif";
-                horse3.style.top = 332;
                 clearInterval(annimation3)
             }
         }
@@ -138,7 +135,7 @@ function runHorse3() {
 
 
 function runHorse4() {
-     horse4 = document.getElementById("horse-4");
+    horse4 = document.getElementById("horse-4");
     horse4.src = "img/run.gif";
     pos4 = 0;
     let speed = Math.floor(Math.random() * 10);
@@ -161,9 +158,8 @@ function runHorse4() {
         } else {
             pos4++;
             horse4.style.left = pos4 + "px";
-            if (pos4 == 400 && horseFourSpeed == 9 ) {
+            if (pos4 == 400 && horseFourSpeed == 9) {
                 horse4.src = "img/atack.gif";
-                horse4.style.top = 471;
                 clearInterval(annimation4)
             }
         }
@@ -171,7 +167,7 @@ function runHorse4() {
 }
 
 function runHorse5() {
-     horse5 = document.getElementById("horse-5");
+    horse5 = document.getElementById("horse-5");
     horse5.src = "img/run.gif";
     pos5 = 0;
     let speed = Math.floor(Math.random() * 10);
@@ -194,9 +190,8 @@ function runHorse5() {
         } else {
             pos5++;
             horse5.style.left = pos5 + "px";
-            if (pos5 == 400 && horseFiveSpeed == 9 ) {
+            if (pos5 == 400 && horseFiveSpeed == 9) {
                 horse5.src = "img/atack.gif";
-                horse5.style.top = 623;
                 clearInterval(annimation5)
             }
         }
