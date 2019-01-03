@@ -31,8 +31,8 @@ var pos4
 var pos5
 
 function move() {
-    // let start = document.getElementById('timer')
-    // start.style.display = 'block';
+     let start = document.getElementById('first-button')
+     start.style.display = 'none';
 
     var winnersBlock = document.getElementById('winners')
     winnersBlock.style.display = 'none'
