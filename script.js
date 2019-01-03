@@ -31,8 +31,8 @@ var pos4
 var pos5
 
 function move() {
-    let start = document.getElementById('first-button')
-    start.style.display = 'none';
+    // let start = document.getElementById('timer')
+    // start.style.display = 'block';
 
     var winnersBlock = document.getElementById('winners')
     winnersBlock.style.display = 'none'
@@ -51,6 +51,8 @@ function move() {
 
 
     function call() {
+        let timer = document.getElementById('timer')
+        timer.style.display = 'none';
         runHorse1();
         runHorse2();
         runHorse3();

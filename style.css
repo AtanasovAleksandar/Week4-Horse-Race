@@ -52,8 +52,13 @@ button {
     font-size: 30px;
 }
 
-.timer {
-    display: none;
+#timer{
+    display: block;
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    right: 271px;
+    top: 315px;
 }
 
 #winners {
