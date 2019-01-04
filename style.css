@@ -1,72 +1,77 @@
 body {
     background: url(img/ground.png);
     background-repeat: no-repeat;
-    width: 1055px;
+    
 }
 
 .main-display {
     position: relative;
     margin-left: -45px;
+    position: relative;
 }
 
-.horse img {
+#horse-1 {
     width: 195px;
     position: absolute;
     top: 14px;
 }
 
-.horse-2 img {
+#horse-2 {
     width: 195px;
     position: absolute;
     top: 153px;
 }
 
-.horse-3 img {
+#horse-3 {
     width: 195px;
     position: absolute;
     top: 303px;
 }
 
-.horse-4 img {
+#horse-4 {
     width: 195px;
     position: absolute;
     top: 445px;
 }
 
-.horse-5 img {
+#horse-5 {
     width: 195px;
     position: absolute;
     top: 600px;
 }
 
 button {
-    bottom: 0px;
     position: absolute;
-    bottom: 85px;
-    left: 165px;
-    width: 200px;
+    width: 242px;
     height: 50px;
-    background-color: cornflowerblue;
+    background-color: #3b88c3;
     border: 1px solid;
     text-align: center;
     font-size: 30px;
+    color: white;
+    left: 603px;
+    top: 192px;
 }
 
-#timer{
-    display: block;
+button:hover {
+    background-color: #062c49d8;
+}
+
+#timer {
+    display: none;
     width: 200px;
     height: 200px;
     position: absolute;
-    right: 271px;
+    left: 628px;
     top: 315px;
 }
 
 #winners {
-    background-color: #9a8946bf;
+    background-color: #685746e0;
     width: 400px;
-    height: 400px;
+    height: 500px;
     position: absolute;
-    top: 165px;
+    top: 145px;
     left: 535px;
     display: none;
 }
@@ -76,43 +81,92 @@ button {
     margin-left: -40px;
     text-align: center;
     list-style-type: none;
-    color: blue;
+    color: #feffff;
     font-weight: 600;
 }
 
 .start-again {
     position: absolute;
-    bottom: 30px;
-    left: 100px;
+    width: 242px;
+    height: 50px;
+    background-color: #3b88c3;
+    border: 1px solid;
+    text-align: center;
+    font-size: 30px;
+    color: white;
+    top: 435px;
+    left: 78px;
 }
 
 .start-again:hover {
-background-color: #2020da6e
+    background-color: #062c49d8;
 }
 
 #last-wins {
     list-style-type: none;
     font-size: 35px;
-    margin-left: 100px;
-    margin-top: 35px;
+    margin-top: 0px;
+    color: white;
+    font-weight: 600;
+    width: 100%;
+    padding: 0px;
+}
+
+ul li {
+    text-align: center;
+}
+
+#place-1 li {
+    border: 2px solid red;
+    text-align: center;
+    width: 99%;
+}
+
+#place-1::before {
+    content: url('img/crown.png');
+    font-size: 18px;
+    margin-left: -95px;
+    color: #2cff1c;
+    font-weight: 700;
+}
+
+.last-round {
+    list-style-type: none;
+    font-size: 42px;
+    color: #eef1fc;
+    margin-bottom: 10px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.bet {
+    width: 93%;
+    text-align: center;
+    background-color: #3b88c3;
+    height: 128px;
+    margin: 12px;
+}
+
+.bet p {
+    font-size: 30px;
     color: white;
     font-weight: 600;
 }
 
-#last-wins li {
-    padding: 0px;
-}
-.last-round {
-    list-style-type: none;
-    font-size: 42px;
-    margin-left: -128px;
-    color: blueviolet;
-    margin-bottom: 10px;
-    font-weight: 600;
+.bet select {
+    width: 50%;
+    height: 40px;
+    background-color: #6f5c4a;
+    color: white;
 }
 
-#palce-1::before {
-content: 'Winner:';
-color: red;
-margin-left: -126px;
+#game-start {
+    display: none;
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    left: 637px;
+    top: 238px;
+    color: white;
+    font-size: 29px;
 }

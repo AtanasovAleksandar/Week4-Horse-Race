@@ -28,24 +28,35 @@
             <img src="img/stand.gif" id="horse-5" alt="">
         </div>
         <div class="timer" id="timer-box">
+            <h2 id="game-start">Game start In:</h2>
             <img src="img/numb-5.png" id="timer" alt="">
         </div>
-    </div>
-    <button id="first-button" type="button" onclick="move()">Start</button>
+   
+    <button id="first-button" type="button" onclick="move()">Start Test Run</button>
 
     <div id="winners">
         <button class="start-again" type="button" onclick="move(),startAgain()">Play Again</button>
         <ul id="winner">
-
         </ul>
+        <div class="bet">
+            <p>Make a Bet:</p>
+            <select name="horses" id="bet-horse">
+                <option value="Player 1">Player 1</option>
+                <option value="Player 2">Player 2</option>
+                <option value="Player 3">Player 3</option>
+                <option value="Player 4">Player 4</option>
+                <option value="Player 5">Player 5</option>
+            </select>
+        </div>
+
         <ul id="last-wins">
             <li class="last-round">Last Round Winners</li>
-            <li id="palce-1"></li>
-            <li id="palce-2"></li>
-            <li id="palce-3"></li>
+            <li id="place-1"></li>
+            <li id="place-2"></li>
+            <li id="place-3"></li>
         </ul>
     </div>
-
+</div>
 </body>
 
 </html>

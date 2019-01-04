@@ -31,15 +31,16 @@ var pos4
 var pos5
 
 function move() {
-     let start = document.getElementById('first-button')
-     start.style.display = 'none';
-
+    let start = document.getElementById('first-button')
+    start.style.display = 'none';
     var winnersBlock = document.getElementById('winners')
     winnersBlock.style.display = 'none'
-    var timeLeft = 5;
+    var timeLeft = 6;
     var downloadTimer = setInterval(function () {
         timeLeft--;
         var imgTimer = document.getElementById('timer')
+        var str = document.getElementById('game-start')
+        str.style.display = 'block'
         document.getElementById("timer").style.display = 'block';
         if (timeLeft != 0) {
             imgTimer.src = "img/numb-" + timeLeft + ".png";
@@ -53,6 +54,8 @@ function move() {
     function call() {
         let timer = document.getElementById('timer')
         timer.style.display = 'none';
+        var str = document.getElementById('game-start')
+        str.style.display = 'none'
         runHorse1();
         runHorse2();
         runHorse3();
@@ -66,7 +69,7 @@ function runHorse1() {
     horse = document.getElementById("horse-1");
     horse.src = "img/run.gif";
     pos1 = 0;
-    let speed = Math.floor(Math.random() * 10);
+    let speed = Math.floor((Math.random() * 15) + 4);
     console.log(speed);
     horseOneSpeed = speed
     animation1 = setInterval(move, speed);
@@ -88,7 +91,7 @@ function runHorse1() {
         } else {
             pos1++;
             horse.style.left = pos1 + "px";
-            if (pos1 == 400 && horseOneSpeed == 9 || pos1 == 800 && horseOneSpeed == 0) {
+            if (pos1 == 400 && horseOneSpeed == 14 || pos1 == 800 && horseOneSpeed == 5) {
                 horse.src = "img/attack .gif";
                 clearInterval(animation1)
             }
@@ -100,7 +103,7 @@ function runHorse2() {
     horse2 = document.getElementById("horse-2");
     horse2.src = "img/run.gif";
     pos2 = 0;
-    let speed = Math.floor(Math.random() * 10);
+    let speed = Math.floor((Math.random() * 15) + 4);
     console.log(speed)
     horseTwoSpeed = speed
     animation2 = setInterval(move, speed);
@@ -123,7 +126,7 @@ function runHorse2() {
             pos2++;
             horse2.style.left = pos2 + "px";
 
-            if (pos2 == 350 && horseTwoSpeed == 9 || pos2 == 900 && horseTwoSpeed == 0) {
+            if (pos2 == 350 && horseTwoSpeed == 14 || pos2 == 900 && horseTwoSpeed == 5) {
                 horse2.src = "img/attack .gif";
                 clearInterval(animation2)
             }
@@ -135,7 +138,7 @@ function runHorse3() {
     horse3 = document.getElementById("horse-3");
     horse3.src = "img/run.gif";
     pos3 = 0;
-    let speed = Math.floor(Math.random() * 17);
+    let speed = Math.floor((Math.random() * 15) + 4);
     console.log(speed)
     horseThreeSpeed = speed
     animation3 = setInterval(move, speed);
@@ -157,7 +160,7 @@ function runHorse3() {
         } else {
             pos3++;
             horse3.style.left = pos3 + "px";
-            if (pos3 == 350 && horseThreeSpeed == 9 || pos3 == 1000 && horseThreeSpeed == 0) {
+            if (pos3 == 350 && horseThreeSpeed == 14 || pos3 == 1000 && horseThreeSpeed == 5) {
                 horse3.src = "img/attack .gif";
                 clearInterval(animation3)
             }
@@ -169,7 +172,7 @@ function runHorse4() {
     horse4 = document.getElementById("horse-4");
     horse4.src = "img/run.gif";
     pos4 = 0;
-    let speed = Math.floor(Math.random() * 12);
+    let speed = Math.floor((Math.random() * 15) + 4);
     console.log(speed)
     horseFourSpeed = speed
     animation4 = setInterval(move, speed);
@@ -191,7 +194,7 @@ function runHorse4() {
         } else {
             pos4++;
             horse4.style.left = pos4 + "px";
-            if (pos4 == 400 && horseFourSpeed == 9 || pos4 == 800 && horseFourSpeed == 0) {
+            if (pos4 == 400 && horseFourSpeed == 14 || pos4 == 800 && horseFourSpeed == 5) {
                 horse4.src = "img/attack .gif";
                 clearInterval(animation4)
             }
@@ -203,7 +206,7 @@ function runHorse5() {
     horse5 = document.getElementById("horse-5");
     horse5.src = "img/run.gif";
     pos5 = 0;
-    let speed = Math.floor(Math.random() * 15);
+    let speed = Math.floor((Math.random() * 15) + 4);
     console.log(speed)
     horseFiveSpeed = speed
     animation5 = setInterval(move, speed);
@@ -225,7 +228,7 @@ function runHorse5() {
         } else {
             pos5++;
             horse5.style.left = pos5 + "px";
-            if (pos5 == 500 && horseFiveSpeed == 9 || pos5 == 950 && horseFiveSpeed == 0) {
+            if (pos5 == 500 && horseFiveSpeed == 14 || pos5 == 950 && horseFiveSpeed == 5) {
                 horse5.src = "img/attack .gif";
                 clearInterval(animation5)
             }
@@ -237,12 +240,20 @@ function addWinner() {
     var winnersBlock = document.getElementById('winners')
     winnersBlock.style.display = 'block'
     let win = document.getElementById('winner')
-    let winnerList = win.innerHTML = "<li class='winner-winner'>" + winnerIs + "</li>"
     this.lWins.winners = winnerIs;
     console.log(this.lWins)
     winObject = Object.assign({}, this.lWins);
     this.lastWins.unshift(winObject);
     console.log(this.lastWins)
+
+    let bet = document.getElementById('bet-horse').value;
+    console.log(bet)
+
+    if (winnerIs == bet) {
+        win.innerHTML = "<li class='winner-winner'>You Win</li>"
+    } else {
+        win.innerHTML = "<li class='winner-winner'>You Lose</li>"
+    }
 
     getWinners()
 }
@@ -260,9 +271,9 @@ function getWinners() {
     let second = lastWins[1].winners
     let third = lastWins[2].winners
 
-    id1 = document.getElementById('palce-1')
-    id2 = document.getElementById('palce-2')
-    id3 = document.getElementById('palce-3')
+    id1 = document.getElementById('place-1')
+    id2 = document.getElementById('place-2')
+    id3 = document.getElementById('place-3')
     console.log(id1)
     id1.innerText = first;
     id2.innerText = second;
