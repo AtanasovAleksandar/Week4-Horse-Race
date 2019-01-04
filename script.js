@@ -131,7 +131,7 @@ function runHorse2() {
             if (pos2 == 350 && horseTwoSpeed == 14 || pos2 == 900 && horseTwoSpeed == 5) {
                 horse2.src = "img/attack .gif";
                 clearInterval(animation2)
-            } 
+            }
         }
     }
 }
@@ -166,7 +166,7 @@ function runHorse3() {
             if (pos3 == 350 && horseThreeSpeed == 14 || pos3 == 1000 && horseThreeSpeed == 5) {
                 horse3.src = "img/attack .gif";
                 clearInterval(animation3)
-            } else if  (pos3 === 300) {
+            } else if (pos3 === 300) {
                 checkEqual()
             }
         }
@@ -203,7 +203,7 @@ function runHorse4() {
             if (pos4 == 400 && horseFourSpeed == 14 || pos4 == 800 && horseFourSpeed == 5) {
                 horse4.src = "img/attack .gif";
                 clearInterval(animation4)
-            } else if  (pos4 === 200) {
+            } else if (pos4 === 200) {
                 checkEqual()
             }
         }
@@ -217,7 +217,7 @@ function runHorse5() {
     let speed = Math.floor((Math.random() * 15) + 4);
     console.log(speed)
     horseFiveSpeed = speed
-        checkEqual()
+    checkEqual()
     animation5 = setInterval(move, horseFiveSpeed);
     function move() {
         if (pos5 == distance) {
@@ -241,7 +241,7 @@ function runHorse5() {
             if (pos5 == 500 && horseFiveSpeed == 14 || pos5 == 950 && horseFiveSpeed == 5) {
                 horse5.src = "img/attack .gif";
                 clearInterval(animation5)
-            } 
+            }
         }
     }
 }
@@ -258,9 +258,15 @@ function addWinner() {
 
     let bet = document.getElementById('bet-horse').value;
     console.log(bet)
+    let score = 0
 
+    let addScore = document.getElementById('scoreWins')
     if (winnerIs == bet) {
         win.innerHTML = "<li class='winner-winner'>You Win</li>"
+        score++
+        addScore.innerText = 'You have' + score + 'points'
+
+
     } else {
         win.innerHTML = "<li class='winner-winner'>You Lose</li>"
     }
