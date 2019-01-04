@@ -1,7 +1,12 @@
 body {
-    background: url(img/ground.png);
+    margin: 0px;
+    padding: 0px;
+}
+
+.main-container {
+    background: url(img/ground-10.png);
     background-repeat: no-repeat;
-    
+    height: 723px;
 }
 
 .main-display {
@@ -19,25 +24,25 @@ body {
 #horse-2 {
     width: 195px;
     position: absolute;
-    top: 153px;
+    top: 147px;
 }
 
 #horse-3 {
     width: 195px;
     position: absolute;
-    top: 303px;
+    top: 284px;
 }
 
 #horse-4 {
     width: 195px;
     position: absolute;
-    top: 445px;
+    top: 411px;
 }
 
 #horse-5 {
     width: 195px;
     position: absolute;
-    top: 600px;
+    top: 552px;
 }
 
 button {
@@ -49,7 +54,7 @@ button {
     text-align: center;
     font-size: 30px;
     color: white;
-    left: 603px;
+    left: 766px;
     top: 192px;
 }
 
@@ -62,7 +67,7 @@ button:hover {
     width: 200px;
     height: 200px;
     position: absolute;
-    left: 628px;
+    left: 790px;
     top: 315px;
 }
 
@@ -72,7 +77,7 @@ button:hover {
     height: 500px;
     position: absolute;
     top: 145px;
-    left: 535px;
+    left: 631px;
     display: none;
 }
 
@@ -125,7 +130,7 @@ ul li {
 #place-1::before {
     content: url('img/crown.png');
     font-size: 18px;
-    margin-left: -95px;
+    margin-left: -32px;
     color: #2cff1c;
     font-weight: 700;
 }
@@ -165,7 +170,7 @@ ul li {
     width: 200px;
     height: 200px;
     position: absolute;
-    left: 637px;
+    left: 790px;
     top: 238px;
     color: white;
     font-size: 29px;

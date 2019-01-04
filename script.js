@@ -1,5 +1,5 @@
 
-var distance = 1250;
+var distance = 1360;
 
 var horseOneSpeed
 var horseTwoSpeed
