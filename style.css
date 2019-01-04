@@ -1,6 +1,7 @@
 body {
     margin: 0px;
     padding: 0px;
+    background-color: #54ebe5;
 }
 
 .main-container {
@@ -54,7 +55,7 @@ button {
     text-align: center;
     font-size: 30px;
     color: white;
-    left: 766px;
+    left: 663px;
     top: 192px;
 }
 
@@ -67,7 +68,7 @@ button:hover {
     width: 200px;
     height: 200px;
     position: absolute;
-    left: 790px;
+    left: 684px;
     top: 315px;
 }
 
@@ -77,7 +78,7 @@ button:hover {
     height: 500px;
     position: absolute;
     top: 145px;
-    left: 631px;
+    left: 590px;
     display: none;
 }
 
@@ -170,7 +171,7 @@ ul li {
     width: 200px;
     height: 200px;
     position: absolute;
-    left: 790px;
+    left: 698px;
     top: 238px;
     color: white;
     font-size: 29px;
