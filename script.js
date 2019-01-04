@@ -264,7 +264,7 @@ function addWinner() {
     if (winnerIs == bet) {
         win.innerHTML = "<li class='winner-winner'>You Win</li>"
         score++
-        addScore.innerText = 'You have' + score + 'points'
+        addScore.innerText = 'You have ' + score + ' points'
 
 
     } else {

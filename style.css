@@ -149,7 +149,7 @@ ul li {
 #place-1 {
     text-align: center;
     width: 99%;
-    animation: mega-win 2s linear 2s infinite alternate;
+    animation: mega-win 3s linear 0.5s infinite alternate;
 }
 
 #place-1::before {
