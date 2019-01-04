@@ -263,9 +263,9 @@ function addWinner() {
     let addScore = document.getElementById('scoreWins')
     if (winnerIs == bet) {
         win.innerHTML = "<li class='winner-winner'>You Win</li>"
-        score++
-        addScore.innerText = 'You have ' + score + ' points'
-
+    //    Score
+        // score++
+        // addScore.innerText = 'You have ' + score + ' points'
 
     } else {
         win.innerHTML = "<li class='winner-winner'>You Lose</li>"
